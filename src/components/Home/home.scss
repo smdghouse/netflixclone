@@ -1,0 +1,96 @@
+$text1:black;
+.banner
+{
+    padding: 30px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    >h1,p{
+        z-index: 5;
+        color: white;
+        margin-left:50px ;
+    }
+    >h1{
+        font:500 35px "Roboto" ;
+    }
+    >p
+    {
+        width: 60%;
+        font: 300 20px "Roboto";
+    }
+    >div{
+        z-index: 5;
+        margin-left:50px ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        >button{
+            background-color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+         &:nth-child(odd){
+            background-color: white;
+            color: black;
+            >svg{
+                color: #000000!important;
+            }
+         }
+         &:nth-child(even)
+         {
+            color: white;
+            >svg{
+                font-size: 25px;
+            }
+         }
+        }
+    }
+    &::after{
+        content: "";
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        top:0;
+        left: 0;
+       
+    }
+}
+.row,.card
+{
+background: $text1;
+}
+.row
+{
+    padding: 1rem;
+    >div{
+    display: flex;
+    overflow-x: auto;
+   }
+   >h2{
+    margin: 0.3rem;
+    color: white;
+    font: 500 25px "Roboto";
+   }
+}
+.card{
+    margin: 0.5rem;
+    height: 200px;
+    transition: 0.5s;
+    &:hover{
+        transform: translatey(-10px)scale(1.04);
+    }
+}
